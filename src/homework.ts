@@ -153,27 +153,27 @@ namespace Urkaine {
 
 
 class Junior {
-    doTasks() {
+    public doTasks() {
         console.log('Actions!!!');
     }
 }
 
 class Middle {
-    createApp() {
+    public createApp() {
         console.log('Creating!!!');
     }
 }
 
 class Senior implements Junior, Middle{
-    doTasks() {
+    public doTasks() {
         console.log('Actions!!!');
     }
 
-    createApp() {
+    public createApp() {
         console.log('Creating!!!');
     }
 
-    createArchitecture() {
+    public createArchitecture() {
         console.log("I'm creating something incredible!!!!!!!")
     }
 }
