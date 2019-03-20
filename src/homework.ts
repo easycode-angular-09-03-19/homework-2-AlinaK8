@@ -6,12 +6,17 @@ function addItemInfoDecorator(target: Object, method: string, descriptor: Proper
 
     descriptor.value = function() {
         
-        let returnValue = originalMethod.apply(this);
-        console.log(returnValue);
+        lconst result = originalFunc.apply(this);
 
         return {
-            info: `${returnValue.name} per ${returnValue.price}`,
-            date: new Date()
+
+            name: result.name,
+
+            price: result.price,
+
+            date: new Date(),
+
+            info: `${result.name} – ${result.price}`
         };
     } 
 }
